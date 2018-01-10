@@ -1,4 +1,5 @@
- 
+ let modulecallback = require("./modulecallback");
+
  let exportModule = {
 
     "option1" : function(){
@@ -38,6 +39,24 @@
         let name = "Sunil Kumar";
 
         callback(name);
+    },
+
+
+    "option5": function(user){
+        return new Promise(function(resolve,reject){
+            try{
+                modulecallback.newfunction(user, function(err, data){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        resolve(data)
+                    }
+                })
+            }catch(err){
+                console.log(err)
+            }
+            
+        })
     }
  }
 

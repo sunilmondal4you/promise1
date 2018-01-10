@@ -16,11 +16,16 @@ let main = function(){
         }).then(function(data){
 
             console.log(data);
-
             exportModule1.option4(function(name){
                 console.log(name);
             })
             
+            let user = "rahul"
+
+            exportModule1.option5(function(user){
+                console.log(user);
+            })
+
         }).catch(function(err){
             console.log(err)
         })
