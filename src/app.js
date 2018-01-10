@@ -12,9 +12,14 @@ let main = function(){
 
             console.log(res);
 
-            exportModule1.option3();
+           return exportModule1.option3();
         }).then(function(data){
+
             console.log(data);
+
+            exportModule1.option4(function(name){
+                console.log(name);
+            })
             
         }).catch(function(err){
             console.log(err)

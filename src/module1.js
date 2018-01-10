@@ -32,6 +32,12 @@
                 console.log(err);
             }
         })
+    },
+
+    "option4" : function(callback){
+        let name = "Sunil Kumar";
+
+        callback(name);
     }
  }
 
